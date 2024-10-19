@@ -1,0 +1,70 @@
+// Define color variables
+$blue: #3498db;
+$body: #34dba3;
+$white: #ffffff;
+
+.container {
+    display: flex;
+    flex-direction: column; // Aligns children in a column layout
+    height: 95vh;
+    padding: 10px;
+
+    .header {
+        display: flex; // Enables Flexbox layout
+        justify-content: space-between; // Aligns items to the edges
+        align-items: center; // Vertically centers items
+        background-color: $blue; // Background color for header
+        padding: 20px; // Padding for the header
+        color: $white; // Text color for header
+        height: 10%; // Height for header
+
+        // Style for the team name
+        .springmountain {
+            font-size: 1.5em; // Larger font size for the team name
+        }
+
+        // Styles for the nav items
+        .nav-items {
+            display: flex; // Enables Flexbox layout for nav items
+            gap: 30px; // Space between nav items
+        }
+
+        // Styles for each navigation item
+        .portfolio,
+        .about,
+        .contact {
+            font-size: 1em; // Font size for navigation items
+
+            &:hover {
+                text-decoration: underline; // Underline effect on hover
+            }
+        }
+    }
+
+    .body {
+        flex-grow: 1; // Allows body to take the remaining space
+        display: flex; // Enables Flexbox layout
+        flex-direction: column; // Stack items vertically
+        align-items: center; // Centers content horizontally
+        justify-content: center; // Centers content vertically
+        background-color: $body;
+    
+        .img {
+            margin-bottom: 20px; // Increase space between image and skill text
+            img {
+                max-width: 100%; // Ensure the image is responsive
+                height: 400px; // Set a specific height for the image
+                object-fit: contain; // Maintain aspect ratio while fitting within the container
+            }
+        }
+    
+        .skill {
+            font-size: 1.5em; // Increase font size for better visibility
+            text-align: center; // Center the text below the logo
+            margin-top: 20px; // Add margin to the top for spacing
+            padding: 20px; // Add padding for better appearance
+            background-color: rgba(52, 219, 163, 0.3); // Optional: Add a background color with transparency
+            border-radius: 8px; // Optional: Add rounded corners
+        }
+    }
+}

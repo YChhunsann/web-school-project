@@ -1,0 +1,34 @@
+.navbar {
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 50%;
+  margin-left: auto;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+.navbar a:hover, .navbar a.active {
+  background-color: #72b372;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .navbar a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

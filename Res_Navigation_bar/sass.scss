@@ -1,0 +1,49 @@
+// Variables
+$primary-color: #72b372; // Green color for active state
+$bg-color: #333;         // Background color for navbar
+$text-color: white;      // Text color for links
+
+// Mixin for responsive design
+@mixin respond($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Navbar styles
+.navbar {
+  background-color: $bg-color;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 50%;               // Set navbar width to 50% of the screen
+  margin-left: auto;        // Align the navbar to the right
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+
+    &:hover, &.active {
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Mobile view - stack vertically
+@include respond(600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;           // On mobile, make the navbar full width
+    margin: 0 auto;        // Ensure it's full width in mobile view
+
+    a {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      border-bottom: 1px solid $text-color;
+    }
+  }
+}

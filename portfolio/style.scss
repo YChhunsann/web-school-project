@@ -1,70 +1,220 @@
-// Define color variables
-$blue: #3498db;
-$body: #34dba3;
-$white: #ffffff;
+$primary-color: #2ecc71;  // Spring Green
+$secondary-color: #8e5c42;  // Mountain Brown
+$accent-color: #87ceeb;  // Sky Blue
+$text-color: #2f4f4f;  // Slate Gray
+$background-color: #f0f8ff;  // Light Cloud Blue
+$font-stack: 'Helvetica Neue', sans-serif;
+$border-radius: 5px;
+
+body {
+    font-family: $font-stack;
+    color: $text-color;
+    line-height: 1.6;
+    background-color: $background-color;
+    margin: 0;
+}
+header {
+    background: $primary-color;
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-left: 2rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
 
 .container {
-    display: flex;
-    flex-direction: column; // Aligns children in a column layout
-    height: 95vh;
-    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
 
-    .header {
-        display: flex; // Enables Flexbox layout
-        justify-content: space-between; // Aligns items to the edges
-        align-items: center; // Vertically centers items
-        background-color: $blue; // Background color for header
-        padding: 20px; // Padding for the header
-        color: $white; // Text color for header
-        height: 10%; // Height for header
+header,
+footer {
+    background: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
 
-        // Style for the team name
-        .springmountain {
-            font-size: 1.5em; // Larger font size for the team name
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0 1rem;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 4rem 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+
+    p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            background: $secondary-color;
+            padding: 1rem;
+            color: white;
+            border-radius: $border-radius;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
+
+#projects {
+    .project-card {
+        background: white;
+        padding: 2rem;
+        border-radius: $border-radius;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        h3 {
+            margin-bottom: 1rem;
+            color: $primary-color;
         }
 
-        // Styles for the nav items
-        .nav-items {
-            display: flex; // Enables Flexbox layout for nav items
-            gap: 30px; // Space between nav items
-        }
-
-        // Styles for each navigation item
-        .portfolio,
-        .about,
-        .contact {
-            font-size: 1em; // Font size for navigation items
+        a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: $primary-color;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
 
             &:hover {
-                text-decoration: underline; // Underline effect on hover
+                background: $accent-color;
             }
         }
+    }
+}
+
+#contact {
+    padding: 4rem 0;
+    text-align: center;
+
+    h2 {
+        color: $primary-color;
+        margin-bottom: 2rem;
     }
 
-    .body {
-        flex-grow: 1; // Allows body to take the remaining space
-        display: flex; // Enables Flexbox layout
-        flex-direction: column; // Stack items vertically
-        align-items: center; // Centers content horizontally
-        justify-content: center; // Centers content vertically
-        background-color: $body;
-    
-        .img {
-            margin-bottom: 20px; // Increase space between image and skill text
-            img {
-                max-width: 100%; // Ensure the image is responsive
-                height: 400px; // Set a specific height for the image
-                object-fit: contain; // Maintain aspect ratio while fitting within the container
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                color: $text-color;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid $text-color;
+                border-radius: $border-radius;
+                font-size: 1rem;
+                font-family: $font-stack;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                }
+            }
+
+            textarea {
+                min-height: 150px;
             }
         }
-    
-        .skill {
-            font-size: 1.5em; // Increase font size for better visibility
-            text-align: center; // Center the text below the logo
-            margin-top: 20px; // Add margin to the top for spacing
-            padding: 20px; // Add padding for better appearance
-            background-color: rgba(52, 219, 163, 0.3); // Optional: Add a background color with transparency
-            border-radius: 8px; // Optional: Add rounded corners
+
+        button {
+            background: $primary-color;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: $border-radius;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: $accent-color;
+            }
         }
     }
+}
+
+
+footer {
+    padding: 1rem 0;
 }

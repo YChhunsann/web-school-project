@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   font-size: 16px;
 }
 
-/* Common Container */
+/* Container: Used throughout the website */
 .container {
   width: 80%;
   max-width: 1200px;
@@ -22,7 +22,7 @@ body {
   padding: 0 20px;
 }
 
-/* Responsive design */
+/* Mobile-first approach: Start with mobile styles */
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -38,19 +38,22 @@ body {
 
 .header .container {
   display: flex;
-  justify-content: space-between; /* Space out the logo and nav */
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow for wrapping on small screens */
+  flex-direction: column; /* Align items vertically on small screens */
 }
 
 .header .logo {
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: 10px; /* Space between logo and nav on mobile */
 }
 
 .nav ul {
   list-style-type: none;
   display: flex;
-  gap: 30px; /* Increased gap between nav items */
+  gap: 30px;
 }
 
 .nav ul li a {
@@ -64,6 +67,36 @@ body {
 .nav ul li a:hover {
   background-color: #2575fc;
   border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header .container {
+    align-items: flex-start; /* Align items to the left */
+    text-align: center; /* Center the nav items below the logo */
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: row; /* Ensure nav items are in a row */
+    justify-content: center; /* Center the nav items horizontally */
+    width: 100%; /* Full width of the screen */
+    gap: 20px; /* Space between items */
+    margin-top: 10px; /* Space between logo and nav */
+  }
+
+  .nav ul li {
+    margin: 0; /* Remove margin from individual items */
+  }
+
+  .header .logo {
+    font-size: 1.8rem; /* Slightly smaller logo on mobile */
+  }
+
+  .nav ul li a {
+    padding: 10px;
+    font-size: 0.9rem; /* Adjust text size on mobile */
+  }
 }
 
 
@@ -84,6 +117,18 @@ body {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .about p {
+    font-size: 1rem; /* Adjust text size on mobile */
+    padding: 0 20px;
+  }
 }
 
 /* Projects Section Styling */
@@ -131,38 +176,20 @@ body {
   text-decoration: underline;
 }
 
-/* Footer Styling */
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer p {
-  font-size: 1rem;
-}
-
-
-/* Add hover effects to buttons and links */
-button,
-a {
-  transition: all 0.3s ease;
-}
-
-button:hover,
-a:hover {
-  transform: translateY(-2px);
-}
-
-/* Responsive Design */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  header {
-    font-size: 1.5rem;
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
   }
 
-  section {
-    padding: 20px;
+  .project-card {
+    width: 80%; /* Full width of the container on mobile */
+    margin-bottom: 20px;
+  }
+
+  .projects h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
   }
 }
 
@@ -209,4 +236,35 @@ button {
 
 button:hover {
   background-color: #6a11cb;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
 }

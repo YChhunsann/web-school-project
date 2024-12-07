@@ -1,0 +1,212 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body and Background */
+body {
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Common Container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* Header Styling */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between; /* Space out the logo and nav */
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px; /* Increased gap between nav items */
+}
+
+.nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.nav ul li a:hover {
+  background-color: #2575fc;
+  border-radius: 5px;
+}
+
+
+/* About Section Styling */
+.about {
+  padding: 60px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.about h2 {
+  color: #2575fc;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects Section Styling */
+.projects {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #2575fc;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.project-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  color: #2575fc;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+
+/* Add hover effects to buttons and links */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+/* Contact Form Styling */
+.contact {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.contact h2 {
+  color: #2575fc;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6a11cb;
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "sku": "P001",
+    "name": "Apple",
+    "description": "Fresh red apple",
+    "price": 1.99,
+    "image": "https://cdn.mos.cms.futurecdn.net/38Moe9n3b72uVEf2Ti7KmV.jpg",
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "sku": "P002",
+    "name": "Banana",
+    "description": "Yellow banana",
+    "price": 0.99,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvJIhKAK0IZw_01WfKOyUHieI5EcVqg9pKQ&s",
+    "rating": 4.0
+  },
+  {
+    "id": 2,
+    "sku": "P003",
+    "name": "Banana",
+    "description": "Mango",
+    "price": 0.99,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mangos_-_single_and_halved.jpg",
+    "rating": 4.0
+  }
+]
